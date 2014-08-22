@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<meta charset="utf-8">
+		<title>Tic-Tac-Toe</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular.js"></script>
+		<script src="js/main.js"></script>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+    </head>
+	<body>
+		<header>
+			<h1>Tic Tac Toe</h1>
+		</header>
+			<div id="container">
+				<section id="col-1">
+					<input placeholder="player one" id="player-one">
+					<div id="p1-options">
+						<button class="color-option one"></button>
+						<button class="color-option two"></button>
+						<button class="color-option three"></button>
+						<button class="color-option four"></button>
+					</div>
+				</section>
+				<section id="game-board">
+					<div class="box" id="one">
+						<button class="board"></button>
+					</div>
+					<div class="box" id="two">
+						<button class="board"></button>
+					</div>
+					<div class="box" id="three">
+						<button class="board"></button>
+					</div><br>
+					<div class="box" id="four">
+						<button class="board"></button>
+					</div>
+					<div class="box" id="five">
+						<button class="board"></button>
+					</div>
+					<div class="box" id="six">
+						<button class="board"></button>
+					</div><br>
+					<div class="box" id="seven">
+						<button class="board"></button>
+					</div>
+					<div class="box" id="eight">
+						<button class="board"></button>
+					</div>
+					<div class="box" id="nine">
+						<button class="board"></button>
+					</div>
+				</section>
+				<section id="col-3">
+					<input placeholder="player two" id="player-two" class="clear">
+					<div id="p2-options">
+						<button class="color-option one"></button>
+						<button class="color-option two"></button>
+						<button class="color-option three"></button>
+						<button class="color-option four"></button>
+					</div>
+				</section>
+			</div>
+		<footer>
+		</footer>
+	</body>
+</html>
