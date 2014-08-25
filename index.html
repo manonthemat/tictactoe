@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="en" ng-app="tttApp">
 	<head>
 		<meta charset="utf-8">
 		<title>Tic-Tac-Toe</title>
@@ -16,21 +16,22 @@
 			<h1>Tic Tac Toe</h1>
 		</header>
 			<div id="container">
-				<section id="col-1">
-					<input placeholder="player one" id="player-one">
+				<section id="col-1" ng-controller="playerInfo">
+					<input type="text" placeholder="player one" id="player-one" ng-model="playerName">
+					<h2 class="player-name" ng-bind="playerName"></h2>
 					<div id="p1-options">
-						<button class="color-option one"></button>
-						<button class="color-option two"></button>
-						<button class="color-option three"></button>
-						<button class="color-option four"></button>
+						<button class="color-option red"></button>
+						<button class="color-option green"></button>
+						<button class="color-option blue"></button>
+						<button class="color-option black"></button>
 					</div>
 				</section>
 				<section id="game-board">
 					<div class="box" id="one">
-						<button class="board"></button>
+						<button class="board" ng-click="tStyleR={'background-color':'red'}" ng-style="tStyleR"></button>
 					</div>
 					<div class="box" id="two">
-						<button class="board"></button>
+						<button class="board" ng-click="tStyleB={'background-color':'blue'}" ng-style="tStyleB"></button>
 					</div>
 					<div class="box" id="three">
 						<button class="board"></button>
@@ -55,12 +56,13 @@
 					</div>
 				</section>
 				<section id="col-3">
-					<input placeholder="player two" id="player-two" class="clear">
+					<input type="text" placeholder="player two" id="player-two" ng-model="playerName">
+					<h2 class="player-name" ng-bind="playerName"></h2>
 					<div id="p2-options">
-						<button class="color-option one"></button>
-						<button class="color-option two"></button>
-						<button class="color-option three"></button>
-						<button class="color-option four"></button>
+						<button class="color-option red"></button>
+						<button class="color-option green"></button>
+						<button class="color-option blue"></button>
+						<button class="color-option black"></button>
 					</div>
 				</section>
 			</div>

@@ -26,12 +26,13 @@ h1 {
 /*
 === header ===
 */
-/*
+h1 {
+	text-align: center;
+	color: white;
+}
 header {
 	background-color: rgb(64, 64, 64);
-	height: 50px;
 }
-*/
 /*
 === game board grid ===
 */
@@ -53,6 +54,9 @@ button {
 	width: 100px;
 	height: 100px;
 }
+#one {
+	color: 
+}
 /*
 === players ===
 */
@@ -60,6 +64,10 @@ input {
 	margin-top: 100px;
 	border: 2px solid black;
 	text-align: center;
+}
+.player-name {
+	text-align: center;
+	color: black;
 }
 #p1-options, #p2-options {
 	text-align: center;
@@ -71,16 +79,16 @@ input {
 	margin: 5px;
 	border: 1px solid black;
 }
-.one {
+.red {
 	background-color: red;
 }
-.two {
-	background-color: blue;
-}
-.three {
+.green {
 	background-color: green;
 }
-.four {
+.blue {
+	background-color: blue;
+}
+.black {
 	background-color: black;
 }
 /*
@@ -92,12 +100,7 @@ input {
 /*
 === footer ===
 */
-/*
-footer {
-	background-color: rgb(64, 64, 64);
-	height: 50px;
-}
-*/
+
 
 
 
