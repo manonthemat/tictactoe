@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tttApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Tic-Tac-Toe</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.18/angular.js"></script>
+		<script src="js/main.js"></script>
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+    </head>
+	<body>
+		<header>
+			<h1>Tic Tac Toe</h1>
+		</header>
+			<div id="container" ng-controller="gamePlay">
+				<section id="col-1">
+					<input type="text" placeholder="player one" id="player-one" ng-model="players[0]" ng-style="{'border': playerColor()}"> 
+					<h2 class="player-name" ng-bind="players[0]"></h2>
+					<div id="p1-options">
+						<button class="color-option red" ng-click="playerRed"></button>
+						<button class="color-option green" ng-click="playerGreen"></button>
+						<button class="color-option blue" ng-click="playerBlue"></button>
+						<button class="color-option black" ng-click="playerBlack"></button>
+					</div>
+				</section>
+				<section id="game-board">
+					<div class="box" ng-repeat="cell in cells track by $index" ng-click="makeMove($index)" ng-style="{'background-color': getCellColor($index)}" ng-class="{cell:true, clear:($index % 3 === 0)}"></div>
+				</section>
+				<section id="col-3">
+					<input type="text" placeholder="player two" id="player-two" ng-model="players[1]" ng-style="pStyleG">
+					<h2 class="player-name" ng-bind="players[1]"></h2>
+					<div id="p2-options">
+						<button class="color-option red"></button>
+						<button class="color-option green" ng-click="playerColorG()"></button>
+						<button class="color-option blue"></button>
+						<button class="color-option black"></button>
+					</div>
+				</section>
+			</div>
+		<footer>
+		</footer>
+	</body>
+</html>

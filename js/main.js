@@ -1,10 +1,17 @@
-var tttApp = angular.module('tttApp', []);
+var tttApp = angular.module('tttApp', ["firebase"]);
 
-tttApp.controller('playerInfo', ['$scope', function($scope) {
+tttApp.controller('playerInfo', ['$scope', '$firebase', function($scope, $firebase) {
 	$scope.playerName = '';
 
 // programmatic representation of gameboard.  [['','',''], ['','',''], ['','','']] - each row on the board
-	$scope.cells = [['','',''], ['','',''], ['','','']];
+	$scope.box = {cells: ["","","","","","","","",""]}; // one
+
+	var ref = $firebase( new Firebase("https://tic-square.firebaseio.com/data"));  // two
+	ref.$bind($scope, "box");  // three
+
+	$scope.$watch("box", function() {  // four
+		console.log("hi");
+	});
 
 // may have to manually (bind) address each item with the ng-repeat methodology
 
