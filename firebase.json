@@ -1,0 +1,9 @@
+{
+  "firebase": "tic-square",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

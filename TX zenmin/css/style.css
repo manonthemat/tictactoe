@@ -1,0 +1,158 @@
+/*
+=== main === 
+*/
+body {
+	width: 100%;
+	margin: 0 auto;
+	background: url("flowers.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+#container {
+	text-align: center;
+}
+#col-1, #game-board, #col-3, #winner {
+	display: inline-block;
+	margin: 20px;	
+}
+#col-1, #col-3 {
+	vertical-align: top;
+	background-color: rgba(255, 255, 255, .9);
+	border: 2px rgba(255, 255, 255, .9);
+	border-radius: 8px; 
+	width: 215px;
+	height: 300px;
+	margin-top: 33px;
+}
+#col-1 {
+	margin-right: 30px;
+}
+#col-3 {
+	margin-left: 30px;
+}
+#winner {
+	background-color: rgba(255, 255, 255, .9);
+	border: 2px rgba(255, 255, 255, .9);
+	border-radius: 8px;
+	width: 300px;
+	height: 40px;
+	margin-top: 30px;
+	clear: both;
+}
+/*
+=== clearfix ===
+*/
+
+
+
+/*
+=== header ===
+*/
+h1 {
+	font-family: 'Cabin';
+	text-align: center;
+	color: white;
+	padding: 10px;
+	padding-top: 25px;
+	margin: 25px;
+	margin-top: 0;
+}
+header {
+	background-color: rgba(77, 77, 77, .9);
+	display: block;
+}
+/*
+=== game board grid ===
+*/
+.box {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #4d4d4d;
+	display: inline-block;
+	margin: 5px 5px;
+	float: left;
+	border-radius: 12px;
+}
+#game-board {
+	text-align: center;
+	width: 342px;
+	margin: 10px;
+}
+.clear {
+	clear: both;
+}
+/*
+=== players ===
+*/
+input {
+	font-family: 'Cabin';
+	border: 2px solid #4d4d4d;
+	text-align: center;
+	border-radius: 8px;
+	margin: 25px 0 50px 0;
+	width: 200px;
+}
+.player-name {
+	font-family: 'Cabin';
+	text-align: center;
+	color: #4d4d4d;
+	margin: 0 0 40px 0;
+}
+#color1, #color2 {
+	width: 50px;
+	height: 50px;
+	border: 2px solid #4d4d4d;
+	border-radius: 12px; 
+	margin: auto;
+	margin-bottom: 25px;
+}
+#color1 {
+	background-color: #b0aa76;
+}
+#color2 {
+	background-color: #fd6432;
+}
+#color1, #color2 {
+	-moz-transition: background-color 2s;
+	-0-transition: background-color 2s;
+	-webkit-transition: background-color 2s;
+	transition: background-color 2s;
+}
+#color1:hover, #color2:hover {
+	background-color: white;
+}
+/*
+=== new game/reset ===
+*/
+#reset, #new-game {
+	width: 50px;
+	height: 19px;
+	border: 2px solid #4d4d4d;
+	text-align: center;
+	border-radius: 8px;
+	margin: auto;
+	background-color: rgba(77, 77, 77, .8);
+}
+h5 {
+	margin-top: 1px;
+	color: white;
+	font-family: 'Cabin';
+	text-align: center;
+}
+/*
+=== winner message ===
+*/
+p {
+	font-family: 'Cabin';
+	text-align: center;
+	color: #4d4d4d;
+	margin-top: 10px;
+}
+/*
+=== footer ===
+*/
+
+
+
+/*
+=== end ===
+*/
