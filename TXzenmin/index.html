@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="tttApp">
 	<head>
-		<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
 		<title>Tic-Tac-Toe</title>
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
@@ -11,7 +11,7 @@
 		<!-- Firebase -->
 		<script src="https://cdn.firebase.com/js/client/1.0.18/firebase.js"></script>
 		<!-- AngularFire must be before .js and after Firebase -->
-		<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+		<script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
 		<script src="js/main.js"></script>
 		<!--[if lt IE 9]>
 		<script src="js/html5shiv.js"></script>
@@ -26,7 +26,7 @@
 				<section id="col-1">
 					<input type="text" placeholder="player one" ng-model="players[0]"> 
 					<h2 class="player-name" ng-bind="players[0]"></h2>
-					<div id="color1"></div>
+					<div id="color1"><p id="scoreOne" ng-bind="playerScore()"></p></div>
 					<div id="new-game"><h5>New</h5></div>
 				</section>
 				<!-- Game Board/Center -->
@@ -41,7 +41,7 @@
 				<section id="col-3">
 					<input type="text" placeholder="player two" ng-model="players[1]">
 					<h2 class="player-name" ng-bind="players[1]"></h2>
-					<div id="color2"></div>
+					<div id="color2"><p id="scoreTwo" ng-bind="playerScore()"></p></div>
 					<div id="reset"><h5>Reset</h5></div>
 				</section>
 			</div>

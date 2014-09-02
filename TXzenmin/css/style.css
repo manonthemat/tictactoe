@@ -4,7 +4,7 @@
 body {
 	width: 100%;
 	margin: 0 auto;
-	background: url("flowers.jpg") no-repeat center center fixed;
+	background: url("flowers.JPG") no-repeat center center fixed;
 	background-size: cover;
 }
 #container {
@@ -120,6 +120,16 @@ input {
 #color1:hover, #color2:hover {
 	background-color: white;
 }
+#scoreOne, #scoreTwo {
+	font-family: 'Cabin';
+	font-size: 28px;
+}
+#scoreOne {
+	color: #b0aa76;
+}
+#scoreTwo {
+	color: #fd6432;
+}
 /*
 === new game/reset ===
 */
@@ -150,9 +160,14 @@ p {
 /*
 === footer ===
 */
+ 
 
-
-
+ 
 /*
 === end ===
 */
+
+
+
+
+
