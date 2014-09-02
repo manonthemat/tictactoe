@@ -11,9 +11,10 @@ $scope.cells = [0,0,0,0,0,0,0,0,0];
 /*var ref = $firebase( new Firebase("https://tic-square-v2.firebaseio.com/data"));
 ref.$bind($scope, "box");*/
 
-$scope.$watch("box", function() {
+/*$scope.$watch("box", function() {
 	console.log("hi");
 });
+*/
 /*
 	var ref = new Firebase("https://tic-square.firebaseio.com/");
 	var sync = $firebase(ref);
@@ -24,10 +25,6 @@ $scope.$watch("box", function() {
 	syncObject.$bindTo($scope, "box");
 }
 */
-
-// === show player name === //
-
-$scope.playerName = '';
 
 // === counter === //
 
@@ -80,11 +77,13 @@ $scope.getCellColor = function(cellNum) {
 };
 
 // === winner & win message === //
-
+$scope.winner = "Everybody is a winner!";
 $scope.getWinner = function(cellNum) {
 	// === rows === //
 		   if (($scope.cells[0] + $scope.cells[1] + $scope.cells[2]) === 3) {
-		return($scope.players[0] + " is the winner!");
+         $scope.playerOneScore += 1;
+         $scope.winner = $scope.players[0] + " is a winner!";
+		//return($scope.players[0] + " is the winner!");
 	} else if (($scope.cells[0] + $scope.cells[1] + $scope.cells[2]) === -3) {
 		return($scope.players[1] + " is the winner!");
 	} else if (($scope.cells[3] + $scope.cells[4] + $scope.cells[5]) === 3) {
@@ -125,14 +124,8 @@ $scope.getWinner = function(cellNum) {
 
 // === score board === //
 
-var playerOneScore = 0;
-var playerTwoScore = 0;
-
-$scope.playerScore = function(playerOneScore, playerTwoScore) {
-	for (var i = 0; i < 50; i++) {
-		return i;
-	}
-};
+$scope.playerOneScore = 0;
+$scope.playerTwoScore = 0;
 
 
 // === confirm app load === //

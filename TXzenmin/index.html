@@ -24,9 +24,9 @@
 			<div id="container" ng-controller="gamePlay">
 				<!-- Player One -->
 				<section id="col-1">
-					<input type="text" placeholder="player one" ng-model="players[0]"> 
+					<input type="text" placeholder="player one" ng-model="players[0]">
 					<h2 class="player-name" ng-bind="players[0]"></h2>
-					<div id="color1"><p id="scoreOne" ng-bind="playerScore()"></p></div>
+					<div id="color1"><p id="scoreOne" ng-bind="playerOneScore"></p></div>
 					<div id="new-game"><h5>New</h5></div>
 				</section>
 				<!-- Game Board/Center -->
@@ -34,14 +34,14 @@
 					<div class="box" ng-repeat="cell in cells track by $index" ng-click="makeMove($index)" ng-style="{'background-color': getCellColor($index)}" ng-class="{cell:true, clear:($index % 3 === 0)}"></div>
 					<br>
 					<div id="winner">
-						<p ng-bind="getWinner($index)"></p>
+						<p ng-bind="winner"></p>
 					</div>
 				</section>
 				<!-- Player Two -->
 				<section id="col-3">
 					<input type="text" placeholder="player two" ng-model="players[1]">
 					<h2 class="player-name" ng-bind="players[1]"></h2>
-					<div id="color2"><p id="scoreTwo" ng-bind="playerScore()"></p></div>
+					<div id="color2"><p id="scoreTwo" ng-bind="playerTwoScore"></p></div>
 					<div id="reset"><h5>Reset</h5></div>
 				</section>
 			</div>
